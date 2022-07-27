@@ -6,7 +6,8 @@ const app = express();
 const cors=require('cors');
 
 //import routs
-//const userRoutes = require ('./routes/userRoutes');
+const userRoutes = require ('./routes/userRoutes');
+const noteRoutes = require ('./routes/noteRoutes');
 
 
 //app middleware
@@ -15,7 +16,8 @@ app.use(cors());
 app.use(express.json());
 
 //rout middleware
-//app.use(userRoutes);
+app.use(userRoutes);
+app.use(noteRoutes);
 
 //port
 const PORT = 8000;
