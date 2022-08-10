@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-
-
 let LoginURL = "http://localhost:8000/signin";
 let AuthURL = "http://localhost:8000/auth";
 let getAllUsers = "http://localhost:8000/getallusers";

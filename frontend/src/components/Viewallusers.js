@@ -17,7 +17,7 @@ const Viewallusers = () => {
 
 	const [users , setusers] = useState([])
   
-	const GetRooms = async () =>{
+	const GetNotes = async () =>{
         
         let data = await GetallUsers();
         let cusdata =[];
@@ -41,7 +41,7 @@ const Viewallusers = () => {
 
 
 	useEffect(() => { 
-        GetRooms();
+        GetNotes();
    },[])
 
 
@@ -57,7 +57,7 @@ const Viewallusers = () => {
         text: "Delete successfull...!",
       });
 
-      GetRooms();
+      GetNotes();
       
     } else {
       Swal.fire({
@@ -71,6 +71,19 @@ const Viewallusers = () => {
     }
   };
   
+    //delete function
+
+onDelete = (id)=>{
+  axios.delete(`http://localhost:8000/user/deleteUser/${id}`).then((res)=>{
+
+    
+
+    this.retrieveNotes();
+  })
+  alert("Deleted succesfully");
+} 
+
+
  /* const searchItems = (ID) => {
         setSearchInput(ID)
         if (searchInput !== 'ID') {
@@ -151,10 +164,10 @@ const Viewallusers = () => {
 
 
                                     <td>  <button className="btn btn-primary" style = {{textDecoration:'none',color:'white'}}
-                                    onClick={() => deleteRowData(users?.Email)}  >
+                                    onClick={() => deleteRowData(users?._id)}  >
                                     &nbsp;Delete
                                     </button></td>
-
+                                 
                                 </tr>
                             ))}
                           </tbody>

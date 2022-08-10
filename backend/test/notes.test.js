@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const areas = require("../models/notes");
+const notes = require("../models/notes");
 
-test("create areas without required filed should failed", async() =>{
-   const adminWithoutRequiredField = new notees({ Title: "Area testing"});
+test("create Notes without required filed should failed", async() =>{
+   const adminWithoutRequiredField = new notes({ Title: "Title testing"});
     let err;
     try {
         const savedAdminWithoutRequiredField =

@@ -66,12 +66,18 @@ onSubmit = (e) =>{
             <div>
    
                 <div className="col-md-8 mt-4 mx-auto">
-                
-                <h1 className= "h3 mb-3 font-weight-normal" style={{color:'White',textShadow: '1px 2px 5px black',fontSize:'50px', marginLeft:'300px'}} >Create Your Note</h1>
+                <div style={{height:'150px', width:'1100px', backgroundColor:"#ADD8E6", marginTop:'-20px',height:"80px"}}>
+                <br/>
+                 <br/>
+                <h1 style={{color:'blue', textAlign:'center',fontSize:"50px"}}>CREATE A NOTE</h1>
+   
+         
+            </div>
 
-                        <button className="btn btn-success" style={{marginLeft:'900px', marginRight:'0px',padding:'10px 10px',backgroundColor:'#3895d3'}}><a href="/Notes" 
-                         style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
-                         <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
+            <br/><br/>
+            <button className="btn btn-success" style={{marginLeft:'900px', marginRight:'0px',padding:'10px 10px',backgroundColor:'#3895d3'}}><a href="/Notes" 
+            style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
+            <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
                 
                     <form>
 
@@ -84,7 +90,7 @@ onSubmit = (e) =>{
                             placeholder="Enter the title"
                             value={this.state.Title}
                             onChange={this.handleInputChange} required/>
-                        </div>
+                    </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
                             <label style={{marginBottom:'5px',fontSize:'20px'}}>Description:</label>
@@ -95,19 +101,19 @@ onSubmit = (e) =>{
                             placeholder="Enter the description"
                             value={this.state.Description}
                             onChange={this.handleInputChange} required/>
-                        </div>
+                    </div>
                         
                         
                     
 
 
-                        <button className="btn btn-success" type="submit" style={{marginTop:'10px',fontSize:'25px',marginLeft:'420px',marginBottom:'20px'}} onClick={this.onSubmit} >
+                    <button className="btn btn-success" type="submit" style={{marginTop:'10px',fontSize:'25px',marginLeft:'420px',marginBottom:'20px'}} onClick={this.onSubmit} >
                             <i className="far fa-check-square"></i>
                             &nbsp; Save
 
-                        </button>
+                    </button>
 
-                    </form>
+                </form>
                     
             </div>
 

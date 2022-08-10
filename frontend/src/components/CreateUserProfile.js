@@ -40,7 +40,7 @@ const Register = () => {
   const handlelastName = (e) => {
     setlastName(e.target.value);
     if (Number(e.target.value)) {
-      alert("Onlu letters are valid");
+      alert("Only letters are valid");
     }
   };
 

@@ -18,6 +18,9 @@ import AddNote from './components/AddNote';
 import ViewNote from './components/ViewNote';
 import UpdateNote from './components/UpdateNote';
 
+import UpdateNotes from './components/UpdateNotes';
+import ViewANote from './components/ViewANote';
+
 
 export default function App() {
   return (
@@ -40,6 +43,8 @@ export default function App() {
                 <Route    path="/addNote" element={<AddNote/>}/>
                 <Route    path="/ViewNote" element={<ViewNote/>}/>
                 <Route    path="/UpdateNote" element={<UpdateNote/>}/>
+                <Route    path="/UpdateNotes/:id" element={<UpdateNotes/>}/>
+                <Route    path="/ViewANote/:id" element={<ViewANote/>}/>
 
                 
 

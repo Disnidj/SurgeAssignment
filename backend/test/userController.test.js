@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const User = require("../models/user");
 
 test("create User without required filed should failed", async() =>{
-    const adminWithoutRequiredField = new User({Name : "Name testing", Password :"testing@my.sliit.lk"});
+    const adminWithoutRequiredField = new User({firstName : "Name testing", Password :"testing@my.sliit.lk"});
     let err;
     try{
         const saveAdminWithoutRequiredField =

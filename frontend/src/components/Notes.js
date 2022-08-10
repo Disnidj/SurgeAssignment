@@ -146,7 +146,7 @@ handleSearchArea=(e)=>{
                   <th scope="row" style={{fontSize:'20px'  }}>{index+1}</th>
 
                    <td style={{fontSize:'20px'}}>
-                    <a href={`http://localhost:8000/note/${Notes._id}`} style={{textDecoration:'none' }}>
+                    <a href={`ViewANote/${Notes._id}`} style={{textDecoration:'none' }}>
                         {Notes.Title}
                     </a>
                     
@@ -155,7 +155,7 @@ handleSearchArea=(e)=>{
                
 
                     <td>
-                        <a className ="btn btn-warning" href={`/note/update/${Notes._id}`}>
+                        <a className ="btn btn-warning" href={`/UpdateNotes/${Notes._id}`}>
                         <i className="fas fa-edit"></i>&nbsp;Edit
                         </a>
                         &nbsp;
